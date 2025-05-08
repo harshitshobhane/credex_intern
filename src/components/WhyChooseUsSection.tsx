@@ -58,26 +58,8 @@ const WhyChooseUsSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{ animationDelay: '150ms' }}>
-              <p className="text-4xl font-bold text-softsell-blue animate-pulse-subtle">1000+</p>
-              <p className="text-gray-600 dark:text-gray-300">Licenses Sold</p>
-            </div>
-            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{ animationDelay: '300ms' }}>
-              <p className="text-4xl font-bold text-softsell-blue animate-pulse-subtle">₹75Cr+</p>
-              <p className="text-gray-600 dark:text-gray-300">Value Recovered</p>
-            </div>
-            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{ animationDelay: '450ms' }}>
-              <p className="text-4xl font-bold text-softsell-blue animate-pulse-subtle">500+</p>
-              <p className="text-gray-600 dark:text-gray-300">Happy Customers</p>
-            </div>
-            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{ animationDelay: '600ms' }}>
-              <p className="text-4xl font-bold text-softsell-blue animate-pulse-subtle">24h</p>
-              <p className="text-gray-600 dark:text-gray-300">Avg. Response Time</p>
-            </div>
-          </div>
-        </div>
+       
+    
       </div>
     </section>
   );

@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Toggle } from '@/components/ui/toggle';
 import { useTheme } from '@/components/ThemeProvider';
+import { scrollToSection } from '@/lib/utils';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,11 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  const handleNavClick = (sectionId: string) => {
+    scrollToSection(sectionId);
+    setIsOpen(false);
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/90 dark:bg-softsell-dark/90 shadow-md backdrop-blur' : 'bg-transparent'
@@ -36,18 +41,30 @@ const Navbar: React.FC = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#how-it-works" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
+            <button 
+              onClick={() => handleNavClick('how-it-works')}
+              className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105"
+            >
               How It Works
-            </a>
-            <a href="#why-choose-us" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
+            </button>
+            <button 
+              onClick={() => handleNavClick('why-choose-us')}
+              className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105"
+            >
               Why Choose Us
-            </a>
-            <a href="#testimonials" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
+            </button>
+            <button 
+              onClick={() => handleNavClick('testimonials')}
+              className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105"
+            >
               Testimonials
-            </a>
-            <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
+            </button>
+            <button 
+              onClick={() => handleNavClick('contact')}
+              className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105"
+            >
               Contact
-            </a>
+            </button>
             <Toggle 
               pressed={theme === 'dark'} 
               onPressedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -83,19 +100,31 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-softsell-dark shadow-lg">
-            <a href="#how-it-works" className="block text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+            <button 
+              onClick={() => handleNavClick('how-it-works')}
+              className="block w-full text-left text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium"
+            >
               How It Works
-            </a>
-            <a href="#why-choose-us" className="block text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+            </button>
+            <button 
+              onClick={() => handleNavClick('why-choose-us')}
+              className="block w-full text-left text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium"
+            >
               Why Choose Us
-            </a>
-            <a href="#testimonials" className="block text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+            </button>
+            <button 
+              onClick={() => handleNavClick('testimonials')}
+              className="block w-full text-left text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium"
+            >
               Testimonials
-            </a>
-            <a href="#contact" className="block text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+            </button>
+            <button 
+              onClick={() => handleNavClick('contact')}
+              className="block w-full text-left text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-base font-medium"
+            >
               Contact
-            </a>
-            <Button variant="default" className="w-full bg-softsell-blue hover:bg-softsell-blue/90" onClick={() => setIsOpen(false)}>
+            </button>
+            <Button variant="default" className="w-full bg-softsell-blue hover:bg-softsell-blue/90">
               Get Started
             </Button>
           </div>

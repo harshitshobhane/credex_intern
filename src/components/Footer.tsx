@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
             <div className="text-2xl font-bold bg-gradient-to-r from-softsell-blue to-softsell-teal bg-clip-text text-transparent mb-4">
-              TechTrade
+              SoftShell
             </div>
             <p className="text-sm text-gray-400 mb-4">
               The easiest way for Indian businesses to sell unused software licenses and maximize returns.
@@ -91,8 +91,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-          <p>© {currentYear} TechTrade India Pvt. Ltd. All rights reserved.</p>
-          <p className="mt-2 text-xs">GST: 29AABCT1234A1Z5</p>
+          <p>© {currentYear} SoftShell India Pvt. Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

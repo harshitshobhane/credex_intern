@@ -93,20 +93,7 @@ const TestimonialsSection: React.FC = () => {
           </Carousel>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
-          <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in">
-            <div className="text-3xl font-bold text-softsell-blue mb-2">1,000+</div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">Licenses Sold</div>
-          </div>
-          <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in">
-            <div className="text-3xl font-bold text-softsell-blue mb-2">₹75 Cr+</div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">Value Recovered</div>
-          </div>
-          <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in">
-            <div className="text-3xl font-bold text-softsell-blue mb-2">24 Hours</div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">Average Response Time</div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
