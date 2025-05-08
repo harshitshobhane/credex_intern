@@ -141,15 +141,15 @@ yarn dev
   ```bash
   npm run build
   # or
-yarn build
+  yarn build
   ```
 - **Preview production build:**
   ```bash
   npm run preview
   # or
-yarn preview
+  yarn preview
   ```
-- Deploy the `dist/` folder to Vercel, Netlify, or GitHub Pages.
+- Deploy the `dist/` folder to Vercel.
 
 ---
 
