@@ -153,11 +153,6 @@ yarn dev
 
 ---
 
-## 🤝 Contributing
-Pull requests and suggestions are welcome! For major changes, please open an issue first.
-
----
-
 ## 📞 Contact & Support
 - **Questions?** Use the in-app chatbot or contact form.
 - **Email:** harshitshobhane348@gmail.com
@@ -165,4 +160,4 @@ Pull requests and suggestions are welcome! For major changes, please open an iss
 ---
 
 ## 📝 License
-This project is for demonstration and educational purposes. Please add your own license as needed.
+This project is for demonstration purposes. 
