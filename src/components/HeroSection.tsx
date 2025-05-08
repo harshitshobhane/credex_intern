@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              className="bg-softsell-blue hover:bg-softsell-blue/90 text-white font-medium px-8 shadow-lg hover:shadow-xl transition-all animate-pulse-subtle"
+              className="bg-softsell-blue hover:bg-softsell-blue/90 text-white font-medium px-8 shadow-lg hover:shadow-xl transition-all animate-pulse-subtle card-hover"
               onClick={scrollToContact}>
               Sell My Licenses
             </Button>
@@ -46,17 +46,18 @@ const HeroSection: React.FC = () => {
         
         <div className="lg:w-1/2 relative animate-fade-in animation-delay-300 flex justify-center">
           <div className="w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-br from-softsell-blue to-softsell-teal rounded-full opacity-10 absolute blur-3xl"></div>
-          <div className="relative floating">
+          <div className="relative animate-bounce-gentle">
             <svg className="w-72 h-72 sm:w-96 sm:h-96" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path 
                 fill="#2563EB" 
                 d="M50.2,-58.9C63.9,-45.4,73,-28.6,77.4,-9.7C81.8,9.3,81.5,30.4,72.2,47.1C62.8,63.8,44.4,76.1,25.1,79.9C5.8,83.7,-14.4,78.9,-32.1,69.4C-49.8,59.9,-65,45.7,-75.5,26.5C-86,7.4,-91.7,-16.7,-84.6,-35.7C-77.5,-54.7,-57.5,-68.7,-38.2,-79C-19,-89.3,-0.7,-95.9,15.1,-89.3C30.9,-82.7,36.5,-72.3,50.2,-58.9Z" 
                 transform="translate(100 100)" 
                 opacity="0.8"
+                className="animate-glow"
               />
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white dark:bg-gray-800 w-52 h-64 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 p-4 flex flex-col">
+              <div className="bg-white dark:bg-gray-800 w-52 h-64 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 p-4 flex flex-col animate-glow card-hover">
                 <div className="flex justify-between mb-4">
                   <div className="h-10 w-20 bg-softsell-blue/10 rounded flex items-center justify-center">
                     <span className="text-xs font-semibold text-softsell-blue">SoftSell</span>
@@ -79,7 +80,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#how-it-works" className="text-gray-500 dark:text-gray-400">
+        <a href="#how-it-works" className="text-gray-500 dark:text-gray-400 hover:text-softsell-blue dark:hover:text-softsell-blue transition-colors">
           <ArrowDown className="h-6 w-6" />
         </a>
       </div>

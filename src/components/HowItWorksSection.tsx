@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Upload, DollarSign, FileText } from 'lucide-react';
+import { Upload, DollarSign, FileText, ChevronRight } from 'lucide-react';
 
 const HowItWorksSection: React.FC = () => {
   const steps = [
@@ -59,16 +59,21 @@ const HowItWorksSection: React.FC = () => {
                 </div>
               </div>
               
-              {/* Arrows between steps */}
+              {/* Fixed arrow positioning between steps */}
               {index < steps.length - 1 && (
-                <div className="hidden md:flex absolute top-1/2 -right-5 transform translate-x-0 translate-y-0 z-20">
+                <div className="hidden md:flex absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 z-20">
                   <div className="w-10 h-10 flex items-center justify-center">
-                    <div className="w-6 h-6 border-t-2 border-r-2 border-softsell-blue transform rotate-45 animate-pulse-subtle"></div>
+                    <ChevronRight className="w-8 h-8 text-softsell-blue animate-pulse-subtle" />
                   </div>
                 </div>
               )}
             </div>
           ))}
+        </div>
+
+        {/* Add visual cues to make the flow more obvious on mobile */}
+        <div className="md:hidden flex flex-col items-center mt-8">
+          <div className="h-16 w-1 bg-gradient-to-b from-softsell-blue to-softsell-blue/20"></div>
         </div>
       </div>
     </section>
