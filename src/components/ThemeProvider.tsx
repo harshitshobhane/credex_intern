@@ -30,8 +30,14 @@ export function ThemeProvider({
         ? 'dark'
         : 'light';
       root.classList.add(systemTheme);
+      
+      // Add custom transition for smooth theme change
+      root.style.transition = 'background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease';
     } else {
       root.classList.add(theme);
+      
+      // Add custom transition for smooth theme change
+      root.style.transition = 'background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease';
     }
   }, [theme]);
 
@@ -41,7 +47,20 @@ export function ThemeProvider({
     if (storedTheme) {
       setTheme(storedTheme);
     }
-  }, []);
+    
+    // Add listener for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      if (theme === 'system') {
+        const root = window.document.documentElement;
+        root.classList.remove('light', 'dark');
+        root.classList.add(mediaQuery.matches ? 'dark' : 'light');
+      }
+    };
+    
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [theme]);
 
   const value = {
     theme,

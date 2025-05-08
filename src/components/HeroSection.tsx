@@ -25,13 +25,13 @@ const HeroSection: React.FC = () => {
             Convert Your Unused Software Licenses Into Cash
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-            TechTrade helps businesses across India maximize the value of their unused software licenses. 
+            SoftSell helps businesses across India maximize the value of their unused software licenses. 
             Get an instant valuation and sell in minutes, not months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              className="bg-softsell-blue hover:bg-softsell-blue/90 text-white font-medium px-8 shadow-lg hover:shadow-xl transition-all"
+              className="bg-softsell-blue hover:bg-softsell-blue/90 text-white font-medium px-8 shadow-lg hover:shadow-xl transition-all animate-pulse-subtle"
               onClick={scrollToContact}>
               Sell My Licenses
             </Button>
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
               <div className="bg-white dark:bg-gray-800 w-52 h-64 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 p-4 flex flex-col">
                 <div className="flex justify-between mb-4">
                   <div className="h-10 w-20 bg-softsell-blue/10 rounded flex items-center justify-center">
-                    <span className="text-xs font-semibold text-softsell-blue">TechTrade</span>
+                    <span className="text-xs font-semibold text-softsell-blue">SoftSell</span>
                   </div>
                   <div className="h-10 w-10 bg-softsell-teal/10 rounded-full flex items-center justify-center">
                     <span className="text-xs font-bold text-softsell-teal">₹</span>

@@ -32,20 +32,20 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-softsell-blue to-softsell-teal bg-clip-text text-transparent">TechTrade</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-softsell-blue to-softsell-teal bg-clip-text text-transparent animate-pulse-subtle">SoftSell</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#how-it-works" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+            <a href="#how-it-works" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
               How It Works
             </a>
-            <a href="#why-choose-us" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+            <a href="#why-choose-us" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
               Why Choose Us
             </a>
-            <a href="#testimonials" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+            <a href="#testimonials" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
               Testimonials
             </a>
-            <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+            <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">
               Contact
             </a>
             <Toggle 
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Toggle>
-            <Button variant="default" className="bg-softsell-blue hover:bg-softsell-blue/90">
+            <Button variant="default" className="bg-softsell-blue hover:bg-softsell-blue/90 transition-transform hover:scale-105">
               Get Started
             </Button>
           </div>
