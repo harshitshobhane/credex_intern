@@ -160,7 +160,7 @@ Pull requests and suggestions are welcome! For major changes, please open an iss
 
 ## 📞 Contact & Support
 - **Questions?** Use the in-app chatbot or contact form.
-- **Email:** support@softshell.com (replace with your real support email)
+- **Email:** harshitshobhane348@gmail.com
 
 ---
 
