@@ -1,11 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Toggle } from '@/components/ui/toggle';
+import { useTheme } from '@/components/ThemeProvider';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,30 +32,44 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-softsell-blue to-softsell-teal bg-clip-text text-transparent">SoftSell</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-softsell-blue to-softsell-teal bg-clip-text text-transparent">TechTrade</span>
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
-              <a href="#how-it-works" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
-                How It Works
-              </a>
-              <a href="#why-choose-us" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
-                Why Choose Us
-              </a>
-              <a href="#testimonials" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
-                Testimonials
-              </a>
-              <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
-                Contact
-              </a>
-              <Button variant="default" className="bg-softsell-blue hover:bg-softsell-blue/90">
-                Get Started
-              </Button>
-            </div>
+          <div className="hidden md:flex items-center space-x-4">
+            <a href="#how-it-works" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+              How It Works
+            </a>
+            <a href="#why-choose-us" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+              Why Choose Us
+            </a>
+            <a href="#testimonials" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+              Testimonials
+            </a>
+            <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal px-3 py-2 rounded-md text-sm font-medium">
+              Contact
+            </a>
+            <Toggle 
+              pressed={theme === 'dark'} 
+              onPressedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label="Toggle theme"
+              className="mr-2 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full p-1.5"
+            >
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Toggle>
+            <Button variant="default" className="bg-softsell-blue hover:bg-softsell-blue/90">
+              Get Started
+            </Button>
           </div>
           
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <Toggle 
+              pressed={theme === 'dark'} 
+              onPressedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label="Toggle theme"
+              className="mr-2 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full p-1.5"
+            >
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Toggle>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 dark:text-gray-200 hover:text-softsell-blue dark:hover:text-softsell-teal focus:outline-none"

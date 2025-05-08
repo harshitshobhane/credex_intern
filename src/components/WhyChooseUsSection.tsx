@@ -7,7 +7,7 @@ const WhyChooseUsSection: React.FC = () => {
     {
       icon: <DollarSign className="h-6 w-6 text-softsell-blue" />,
       title: "Best Market Value",
-      description: "Our network of buyers ensures you get the highest price for your unused software licenses."
+      description: "Our network of buyers ensures you get the highest price for your unused software licenses across India."
     },
     {
       icon: <Clock className="h-6 w-6 text-softsell-blue" />,
@@ -17,24 +17,24 @@ const WhyChooseUsSection: React.FC = () => {
     {
       icon: <Shield className="h-6 w-6 text-softsell-blue" />,
       title: "Secure & Compliant",
-      description: "Our platform ensures all transactions are legally compliant and data is kept secure."
+      description: "Our platform ensures all transactions comply with Indian IT laws and your data is kept secure."
     },
     {
       icon: <Users className="h-6 w-6 text-softsell-blue" />,
       title: "Expert Support",
-      description: "Our team of license specialists will guide you through every step of the process."
+      description: "Our team of license specialists in Bangalore, Delhi and Mumbai will guide you through every step."
     }
   ];
 
   return (
-    <section id="why-choose-us" className="section bg-gray-50 dark:bg-gray-800 py-20">
+    <section id="why-choose-us" className="section bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl mb-4">
-            Why Choose <span className="text-softsell-blue">SoftSell</span>
+            Why Choose <span className="text-softsell-blue">TechTrade</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-            We've helped thousands of businesses recover value from their unused software licenses.
+            We've helped thousands of businesses across India recover value from their unused software licenses.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const WhyChooseUsSection: React.FC = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-600 animate-fade-in"
+              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600 animate-fade-in transform hover:-translate-y-1"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="inline-block p-3 rounded-full bg-blue-50 dark:bg-blue-900/30 mb-4">
@@ -60,19 +60,19 @@ const WhyChooseUsSection: React.FC = () => {
 
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6 animate-fade-in" style={{ animationDelay: '150ms' }}>
+            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md" style={{ animationDelay: '150ms' }}>
               <p className="text-4xl font-bold text-softsell-blue">1000+</p>
               <p className="text-gray-600 dark:text-gray-300">Licenses Sold</p>
             </div>
-            <div className="p-6 animate-fade-in" style={{ animationDelay: '300ms' }}>
-              <p className="text-4xl font-bold text-softsell-blue">$10M+</p>
+            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md" style={{ animationDelay: '300ms' }}>
+              <p className="text-4xl font-bold text-softsell-blue">₹75Cr+</p>
               <p className="text-gray-600 dark:text-gray-300">Value Recovered</p>
             </div>
-            <div className="p-6 animate-fade-in" style={{ animationDelay: '450ms' }}>
+            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md" style={{ animationDelay: '450ms' }}>
               <p className="text-4xl font-bold text-softsell-blue">500+</p>
               <p className="text-gray-600 dark:text-gray-300">Happy Customers</p>
             </div>
-            <div className="p-6 animate-fade-in" style={{ animationDelay: '600ms' }}>
+            <div className="p-6 animate-fade-in bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md" style={{ animationDelay: '600ms' }}>
               <p className="text-4xl font-bold text-softsell-blue">24h</p>
               <p className="text-gray-600 dark:text-gray-300">Avg. Response Time</p>
             </div>

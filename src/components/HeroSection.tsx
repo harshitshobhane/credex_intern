@@ -13,32 +13,32 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center pt-20 pb-10">
-      <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-softsell-dark dark:to-softsell-dark/80 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-softsell-dark dark:to-blue-950/30 -z-10"></div>
       <div className="absolute top-0 left-0 right-0 h-full overflow-hidden -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.1),transparent_60%)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_70%,rgba(14,165,233,0.1),transparent_60%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(37,99,235,0.15),transparent_60%)]"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_70%,rgba(14,165,233,0.15),transparent_60%)]"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="max-w-2xl animate-fade-in">
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl bg-gradient-to-r from-softsell-blue to-softsell-teal bg-clip-text text-transparent mb-6">
-            Transform Your Unused Software Licenses Into Cash
+            Convert Your Unused Software Licenses Into Cash
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-            SoftSell helps businesses maximize the value of their unused software licenses. 
+            TechTrade helps businesses across India maximize the value of their unused software licenses. 
             Get an instant valuation and sell in minutes, not months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              className="bg-softsell-blue hover:bg-softsell-blue/90 text-white font-medium px-8"
+              className="bg-softsell-blue hover:bg-softsell-blue/90 text-white font-medium px-8 shadow-lg hover:shadow-xl transition-all"
               onClick={scrollToContact}>
               Sell My Licenses
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-softsell-blue text-softsell-blue hover:bg-softsell-blue/10">
+              className="border-softsell-blue text-softsell-blue hover:bg-softsell-blue/10 shadow-sm hover:shadow-md transition-all">
               Get a Quote
             </Button>
           </div>
@@ -58,12 +58,18 @@ const HeroSection: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="bg-white dark:bg-gray-800 w-52 h-64 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 p-4 flex flex-col">
                 <div className="flex justify-between mb-4">
-                  <div className="h-10 w-20 bg-softsell-blue/10 rounded"></div>
-                  <div className="h-10 w-10 bg-softsell-teal/10 rounded-full"></div>
+                  <div className="h-10 w-20 bg-softsell-blue/10 rounded flex items-center justify-center">
+                    <span className="text-xs font-semibold text-softsell-blue">TechTrade</span>
+                  </div>
+                  <div className="h-10 w-10 bg-softsell-teal/10 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-softsell-teal">₹</span>
+                  </div>
                 </div>
                 <div className="h-5 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-3"></div>
                 <div className="h-5 w-1/2 bg-gray-200 dark:bg-gray-700 rounded mb-6"></div>
-                <div className="h-20 w-full bg-softsell-blue/10 rounded mb-4"></div>
+                <div className="h-20 w-full bg-softsell-blue/10 rounded mb-4 flex items-center justify-center">
+                  <span className="text-softsell-blue font-semibold">License Value:<br/>₹4,25,000</span>
+                </div>
                 <div className="h-8 w-full bg-softsell-teal rounded mt-auto flex items-center justify-center text-white text-xs font-bold">
                   SELL NOW
                 </div>
