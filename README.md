@@ -19,7 +19,7 @@ A modern, fully responsive, single-page marketing website for a fictional softwa
 | React.js + Vite                              | ✅           | Built with React, Vite, and TypeScript                                                 |
 | Dummy data, no backend                       | ✅           | All data is hardcoded or mocked                                                        |
 | README with features, design, time spent      | ✅           | (See below)                                                                            |
-| Hosted on Vercel/Netlify/GitHub Pages        | ✅           | (Add your live URL here)                                                               |
+| Hosted on Vercel/Netlify/GitHub Pages        | ✅           | https://credex-intern-alpha.vercel.app/                                                            |
 | Logo placeholder or favicon                   | ✅           | Logo placeholder and favicon included                                                  |
 | SEO meta tags and page title                  | ✅           | React Helmet for meta tags, Open Graph, Twitter Card                                   |
 | Light/dark mode toggle                       | ✅           | Toggle in Navbar, persists across sessions                                             |
